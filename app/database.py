@@ -5,8 +5,8 @@ DB_HOST = "localhost"
 DB_PORT = 5454  # потому что запущено через докер, я там поменял порт БД
 
 DB_NAME = "hotel"
-DB_USER = "posgres"
-DB_PASS = "posgres"
+DB_USER = "postgres"
+DB_PASS = "postgres"
 
 DATABASE_URL = f"postgresql+asyncpg://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
