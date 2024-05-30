@@ -2,23 +2,6 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 16.2
--- Dumped by pg_dump version 16.2
-
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = off;
-
---
--- Data for Name: hotels; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.hotels (id, name, location, service, rooms_quantity, image_id) VALUES (1, 'Corpo Santo Lisbon Historical Hotel', 'Largo do Corpo Santo, 25, Лиссабон 1200-129 Португалия', '["Платная общественная парковка на территории",
 "Бесплатный WiFi",
@@ -203,51 +186,12 @@ INSERT INTO public.rooms (id, hotel_id, name, description, price, services, quan
 "Мини-кухня"]', 4, 6);
 
 
---
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
 INSERT INTO public.users (id, email, hashed_password) VALUES (1, 'vasjan@gmail.com', 'tyt_budet_hash_1');
 INSERT INTO public.users (id, email, hashed_password) VALUES (2, 'masha@gmail.com', 'tyt_budet_hash_2');
 
 
---
--- Data for Name: bookings; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.bookings (id, room_id, user_id, date_from, date_to, price) VALUES (1, 1, 2, '2024-08-22', '2024-08-25', 355);
 INSERT INTO public.bookings (id, room_id, user_id, date_from, date_to, price) VALUES (2, 10, 1, '2024-10-14', '2024-10-21', 224);
 
-
---
--- Name: bookings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.bookings_id_seq', 2, true);
-
-
---
--- Name: hotels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.hotels_id_seq', 6, true);
-
-
---
--- Name: rooms_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.rooms_id_seq', 16, true);
-
-
---
--- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.users_id_seq', 2, true);
-
-
---
--- PostgreSQL database dump complete
---
 
