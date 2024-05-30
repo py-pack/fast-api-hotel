@@ -13,7 +13,8 @@ from alembic import context
 # *********    Прописываем данному файлу директорию рута, чтоб не было конфликтов с импортом
 sys.path.insert(0, dirname(dirname(dirname(abspath(__file__)))))
 
-from app.database import Base, DATABASE_URL
+from app.config import settings
+from app.database import Base
 from app.hotels.models import Hotel
 
 # this is the Alembic Config object, which provides
@@ -21,7 +22,7 @@ from app.hotels.models import Hotel
 config = context.config
 
 # *********    подменяем ссылку подключение к БД
-config.set_main_option('sqlalchemy.url', f"{DATABASE_URL}?async_fallback=True")
+config.set_main_option('sqlalchemy.url', f"{settings.DATABASE_URL}?async_fallback=True")
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
