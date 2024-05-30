@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+    db:
+        image: postgres:16.2-alpine3.19
+        container_name: hotel_db
+        ports:
+            - "${DB_PORT:-5454}:5432"
+        volumes:
+            -  "hotel_db:/var/lib/postgresql/data"
+        environment:
+            POSTGRES_DB: ${DB_NAME:-hotel}
+            POSTGRES_USER: ${DB_USER:-posgres}
+            POSTGRES_PASSWORD: ${DB_PASS:-posgres}
+
+volumes:
+    hotel_db:
