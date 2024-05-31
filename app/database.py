@@ -3,12 +3,13 @@ from sqlalchemy.orm import DeclarativeBase, sessionmaker
 
 from app.config import settings
 
-angine = create_async_engine(
+engine = create_async_engine(
     settings.DATABASE_URL,
+    echo=True,
 )
 
 async_session_maker = sessionmaker(
-    engine=angine,
+    engine,
     class_=AsyncSession,  # Указываем что должен будет использоваться ассинхронное подключение
     expire_on_commit=False,  # не рвать связь после транзакции
 )
