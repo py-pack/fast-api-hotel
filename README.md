@@ -18,12 +18,12 @@
 
 1. Предисловие
 1. API vs FastAPI. В чем разница?
-1. [Запускаем FastAPI](./course/1.3.md)
-1. [Валидация данных с Pydantic](./course/1.4.md)
-1. [База Данных: Подключение](./course/1.5.md)
-1. [База Данных: Запросы](./course/1.6.md)
-1. [Авторизация и аутентификация](./course/1.7.md)
-1. Дорабатываем функционал
+1. [Запускаем FastAPI](./course/1.3.install.md)
+1. [Валидация данных с Pydantic](./course/1.4.pydantic.md)
+1. [База Данных: Подключение](./course/1.5.alembic.md)
+1. [База Данных: Запросы](./course/1.6.alchemy_session.md)
+1. [Авторизация и аутентификация](./course/1.7.jwt.md)
+1. [Дорабатываем функционал (query Alchemy)](./course/1.8.alchemy.md)
 1. Фронтенд и работа с файлами
 1. FastAPI vs Django vs Flask
 

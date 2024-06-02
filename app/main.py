@@ -1,3 +1,4 @@
+import uvicorn
 from fastapi import FastAPI, Query, Depends
 from typing import Optional, List, Dict, Union
 from datetime import date
@@ -58,3 +59,6 @@ class SBooking(BaseModel):
 @app.post("/bookings")
 def get_bookings(booking: SBooking):
     pass
+
+if __name__ == "__main__":
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)

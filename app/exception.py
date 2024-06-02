@@ -33,3 +33,8 @@ UserIsNotAdminException = HTTPException(
     status_code=status.HTTP_405_METHOD_NOT_ALLOWED,
     detail="У вас не достаточно прав",
 )
+
+RoomCannotBeBoredException = HTTPException(
+    status_code=status.HTTP_409_CONFLICT,
+    detail="Не осталось свободных номеров",
+)
